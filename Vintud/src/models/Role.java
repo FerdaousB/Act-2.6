@@ -1,12 +1,14 @@
 package models;
 
+import java.util.List;
+
 import interfaces.RoleImpl;
 
 public class Role implements RoleImpl {
 	
 	private int id ;
 	private String nom ;
-	
+	private List<User> usersForThisRole ;
 	
 	public Role() {
 	}

@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 import interfaces.UserImpl;
 
 public class User implements UserImpl {
@@ -14,7 +16,8 @@ public class User implements UserImpl {
 	private String address  ;
 	private int role_id  ;
 	
-	
+	public List<Announcement> ListAnnoncePost;
+	public List<Announcement> ListAnnonceFavoris;
 	
 	
 	
