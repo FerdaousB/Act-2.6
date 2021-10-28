@@ -13,10 +13,12 @@ public class main {
 		
 		//A1.CreerCompte();
 		//A1.afficherAnnonce();
-		//A1.VerifCompte();
-		
-		A1.ModifInfoPerso();
-
+		A1.VerifCompte("talan");
+		 // A1.CreerAnnonce();
+		// A1.afficherUser();
+		//A1.ModifInfoPerso();
+       // A1.DeleteAnnoce();
+		//A1.ModifAnnonce();
 	}
 
 }
