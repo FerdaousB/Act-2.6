@@ -12,8 +12,9 @@ public class AnnouncementManager {
 
 	
 	Connection  con = ConnectionManager.getConnection();
-    ResultSet rs = null;
-    String requete = "";	
+        ResultSet rs = null;
+         String requete = "";	
+	
 	public void CreerCompte() throws SQLException {		
 		 Scanner Sc1 = new Scanner(System.in);
 		 System.out.println("Ajouter id :");
@@ -55,7 +56,7 @@ public class AnnouncementManager {
 		 try {
 		 Statement stmt = con.createStatement();
 		 stmt.executeUpdate(requete) ;
-		 System.out.println("User ajouté avec succés");
+		 System.out.println("User ajoutÃ© avec succÃ©s");
 
 		 } catch (SQLException e) {
 	    	   e.printStackTrace();
@@ -81,9 +82,9 @@ public class AnnouncementManager {
 		       while (rs.next()) {
     	 
 		        	if(rs.getString("u_password").equals(passeword1)){			   
-	        	         System.out.println("Connexion réussie !");}
+	        	         System.out.println("Connexion rÃ©ussie !");}
 		        	else {
-		        		 System.out.println("Connexion nn réussie !");
+		        		 System.out.println("Connexion nn rÃ©ussie !");
 		        	}		        	
 	           }	           
 		           rs.close();
@@ -158,7 +159,7 @@ public class AnnouncementManager {
     
     public void CreerAnnonce() throws SQLException {
 				
-		 String  requete = "INSERT INTO vintud.announcement (id, title, description, category_id, price, picture, publication_date, is_available, view_number, localisation, user_id)" +  "VALUES  (3, 't-shirt bon état', 'Je vends mon magnifique t-shirt acheté lannée dernière en solde, taille M.',1,24.98,NULL,'2019-01-25 8:32:12', true, 2,'Paris 9ième',1);";
+		 String  requete = "INSERT INTO vintud.announcement (id, title, description, category_id, price, picture, publication_date, is_available, view_number, localisation, user_id)" +  "VALUES  (3, 't-shirt bon Ã©tat', 'Je vends mon magnifique t-shirt achetÃ© lannÃ©e derniÃ¨re en solde, taille M.',1,24.98,NULL,'2019-01-25 8:32:12', true, 2,'Paris 9iÃ¨me',1);";
 		
 		 try {		 
 				Statement tmt = con.createStatement(); 
@@ -176,7 +177,7 @@ public class AnnouncementManager {
 		   }   	}
     public void DeleteAnnoce() throws SQLException {
 		
-		 String  requete = "DELETE FROM vintud.announcement WHERE title='t-shirt bon état'"; 
+		 String  requete = "DELETE FROM vintud.announcement WHERE title='t-shirt bon Ã©tat'"; 
 		 try {		 
 				Statement tmt = con.createStatement();           
 	            int resultat = tmt.executeUpdate(requete);             
